@@ -22,12 +22,12 @@ gem "bootstrap-sass-extras"
 gem "bootswatch-rails"
 gem "jquery-rails"
 gem "sass-rails", "~> 5.0"
+gem "simple_form"
 gem "slim-rails"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "awesome_print"
-  gem "capybara", "~> 2.13"
   gem "factory_bot_rails"
   gem "ffaker"
   gem "pry"
@@ -43,4 +43,10 @@ group :development do
   gem "web-console", ">= 3.3.0"
 end
 
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+group :test do
+  gem "capybara", "~> 2.13"
+  gem "database_cleaner"
+  gem "email_spec"
+  gem "shoulda-matchers", "~> 3.1"
+  gem "simplecov", require: false
+end
