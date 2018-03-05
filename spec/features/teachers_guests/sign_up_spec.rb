@@ -1,5 +1,3 @@
-require "rails_helper"
-
 RSpec.describe "Sign Up", type: :feature do
   let(:teacher_attributes) { attributes_for(:teacher).slice(:first_name, :last_name, :email, :password, :password_confirmation) }
   let(:registered_teacher) { Teacher.find_by(email: teacher_attributes[:email]) }

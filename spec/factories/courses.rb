@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :course do
-    user_id 1
-    title "MyString"
-    description "MyText"
+    teacher
+    title "My Course"
+    description "My Course Description"
   end
 end
