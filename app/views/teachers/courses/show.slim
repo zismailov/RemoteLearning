@@ -18,8 +18,7 @@
     p
       strong Перетащите темы для изменения порядка
 
-    ul.course-topics-list
-      = render course.topics
+    #course-topics data-course-topics=course.topics.to_json
 
     .well
       = simple_form_for [:teachers, course, course.topics.new] do |f|
@@ -27,5 +26,4 @@
 
         .text-center = f.submit class: "btn btn-default btn-sm"
 
-javascript:
-  $(function() { $(".course-topics-list").sortable(); });
+= javascript_pack_tag "course"
