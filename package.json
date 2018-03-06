@@ -4,7 +4,10 @@
   "dependencies": {
     "@rails/webpacker": "^3.3.0",
     "babel-preset-react": "^6.24.1",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "1.12.7",
     "prop-types": "^15.6.1",
+    "rails-erb-loader": "^5.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-sortable-hoc": "^0.6.8"

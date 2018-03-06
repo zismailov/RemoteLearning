@@ -10,6 +10,7 @@ gem "rails", "~> 5.1.5"
 # core
 gem "decent_exposure"
 gem "foreman"
+gem "interactor", "~> 3.0"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.7"
 gem "webpacker", "~> 3.2"
