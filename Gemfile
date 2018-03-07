@@ -32,6 +32,9 @@ gem "simple_form"
 gem "slim-rails"
 gem "uglifier", ">= 1.3.0"
 
+# markdown
+gem "redcarpet"
+
 group :development, :test do
   gem "awesome_print"
   gem "factory_bot_rails"
