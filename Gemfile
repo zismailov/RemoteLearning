@@ -15,6 +15,9 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.7"
 gem "webpacker", "~> 3.2"
 
+# services
+gem "rollbar"
+
 # auth
 gem "devise"
 
