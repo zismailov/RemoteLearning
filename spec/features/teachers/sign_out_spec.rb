@@ -4,7 +4,7 @@ RSpec.describe "Sign Out", type: :feature do
   include_context "teacher signed in"
 
   it "teacher signs out" do
-    visit "/"
+    visit teacher_root_path
 
     click_on current_teacher.full_name
 
