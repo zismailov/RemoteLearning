@@ -8,7 +8,7 @@ module Api
       expose :topic
 
       def update
-        topic.update_attributes(topic_params)
+        topic.update(topic_params)
         topic.save
 
         respond_with topic

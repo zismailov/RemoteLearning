@@ -37,6 +37,7 @@ gem "redcarpet"
 
 group :development, :test do
   gem "awesome_print"
+  gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
   gem "factory_bot_rails"
   gem "ffaker"
   gem "pry"
