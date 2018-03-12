@@ -3,6 +3,10 @@ require "rails_helper"
 RSpec.describe Learner, type: :model do
   subject(:learner) { Learner.new }
 
+  describe "associations" do
+    it { is_expected.to have_many :courses }
+  end
+
   describe "validations" do
     it { is_expected.to validate_presence_of :email }
     it { is_expected.to validate_presence_of :first_name }
