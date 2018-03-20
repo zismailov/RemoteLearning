@@ -17,6 +17,11 @@ Rails.application.routes.draw do
 
   namespace :learners do
     resource :dashboard, only: :show
+
+    resources :available_courses, only: :index
+    resources :course_participations, only: %i[create destroy]
+    resources :courses, only: %i[index show]
+    resources :topics, only: :show
   end
 
   authenticated :teacher do
