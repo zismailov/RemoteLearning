@@ -8,7 +8,9 @@ end
 gem "rails", "~> 5.1.5"
 
 # core
+gem "carrierwave", "~> 1.0"
 gem "decent_exposure"
+gem "fog-aws"
 gem "foreman"
 gem "interactor", "~> 3.0"
 gem "pg", ">= 0.18", "< 2.0"
