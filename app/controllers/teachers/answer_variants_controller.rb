@@ -1,32 +1,33 @@
 module Teachers
-  class QuestionsController < BaseController
+  class AnswerVariantsController < BaseController
     respond_to :html
 
-    expose :topic
     expose :question
+    expose :topic, from: :question
+    expose :answer_variant
 
     def create
-      question.save
+      answer_variant.save
 
       redirect_back fallback_location: teachers_topic_path(topic)
     end
 
     def update
-      question.update(question_params)
+      answer_variant.update(answer_variant_params)
 
       redirect_back fallback_location: teachers_topic_path(topic)
     end
 
     def destroy
-      question.destroy
+      answer_variant.destroy
 
       redirect_back fallback_location: teachers_topic_path(topic)
     end
 
     private
 
-    def question_params
-      params.require(:question).permit(:title).merge(topic_id: topic.id)
+    def answer_variant_params
+      params.require(:answer_variant).permit(:text, :correct).merge(question_id: question.id)
     end
   end
 end
