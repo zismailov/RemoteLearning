@@ -15,6 +15,7 @@ gem "foreman"
 gem "interactor", "~> 3.0"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.7"
+gem "rails_admin", "~> 1.3"
 gem "webpacker", "~> 3.2"
 
 # services

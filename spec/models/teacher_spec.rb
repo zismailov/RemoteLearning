@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Teacher, type: :model do
-  subject(:teacher) { Teacher.new }
+  subject(:teacher) { create(:teacher) }
 
   describe "validations" do
     it { is_expected.to validate_presence_of :email }

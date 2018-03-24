@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Learner, type: :model do
-  subject(:learner) { Learner.new }
+  subject(:learner) { create(:learner) }
 
   describe "associations" do
     it { is_expected.to have_many :courses }
