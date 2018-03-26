@@ -1,25 +1,15 @@
 module Teachers
   class MaterialsController < BaseController
-    respond_to :html
+    respond_to :html, :js
 
     expose :topic
     expose :material
 
     def create
       material.save
-
-      redirect_back fallback_location: teachers_topic_path(topic)
     end
 
-    def update
-      material.update(material_params)
-    end
-
-    def destroy
-      material.destroy
-
-      redirect_back fallback_location: teachers_topic_path(topic)
-    end
+    delegate :destroy, to: :material
 
     private
 
