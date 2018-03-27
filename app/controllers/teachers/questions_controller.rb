@@ -1,6 +1,6 @@
 module Teachers
   class QuestionsController < BaseController
-    respond_to :html
+    respond_to :js
 
     expose :question
     expose :topic
@@ -8,21 +8,9 @@ module Teachers
     def create
       question.topic = topic
       question.save
-
-      redirect_back fallback_location: teachers_topic_path(topic)
     end
 
-    def update
-      question.update(question_params)
-
-      redirect_back fallback_location: teachers_topic_path(question.topic)
-    end
-
-    def destroy
-      question.destroy
-
-      redirect_back fallback_location: teachers_topic_path(question.topic)
-    end
+    delegate :destroy, to: :question
 
     private
 
