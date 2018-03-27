@@ -9,5 +9,6 @@ RSpec.describe Topic, type: :model do
   describe "associations" do
     it { is_expected.to have_many :materials }
     it { is_expected.to have_many :questions }
+    it { is_expected.to have_many :tasks }
   end
 end
