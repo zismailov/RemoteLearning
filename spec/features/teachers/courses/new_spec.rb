@@ -13,6 +13,7 @@ RSpec.describe "Teacher creates new course", type: :feature do
 
   it "with valid parameters" do
     fill_in :course_title, with: course_attributes[:title]
+    fill_in :course_slug, with: course_attributes[:slug]
     fill_in :course_description, with: course_attributes[:description]
 
     click_button "Create Course"
