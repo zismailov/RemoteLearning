@@ -15,15 +15,16 @@ html lang="en"
 
     javascript:
       window.App = {};
-
     = javascript_include_tag "application"
     = javascript_pack_tag "application"
 
     /! Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"
+  body
+    - if Rails.env.staging? || Rails.env.production?
+      = render "ga"
 
-    body
     = render "navigation"
 
     .container
