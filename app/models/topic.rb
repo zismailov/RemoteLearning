@@ -7,4 +7,6 @@ class Topic < ApplicationRecord
   validates :title, :course_id, presence: true
 
   scope :ordered_by_index, -> { order(order_index: :asc) }
+
+  delegate :count, to: :materials, prefix: true
 end

@@ -8,6 +8,7 @@ end
 gem "rails", "~> 5.1.5"
 
 # core
+gem "active_model_serializers", "~> 0.10.0"
 gem "carrierwave", "~> 1.0"
 gem "decent_exposure"
 gem "fog-aws"
@@ -34,9 +35,6 @@ gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "slim-rails"
 gem "uglifier", ">= 1.3.0"
-
-# markdown
-gem "redcarpet"
 
 group :development, :test do
   gem "awesome_print"
