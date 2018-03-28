@@ -5,4 +5,8 @@ FactoryBot.define do
     slug "my-course"
     description "My Course Description"
   end
+
+  trait :published do
+    published true
+  end
 end
