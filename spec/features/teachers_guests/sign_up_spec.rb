@@ -1,8 +1,11 @@
 RSpec.describe "Sign Up", type: :feature do
-  let(:teacher_attributes) { attributes_for(:teacher).slice(:first_name, :last_name, :email, :password, :password_confirmation) }
+  let(:teacher_attributes) {
+    attributes_for(:teacher).slice(:first_name, :last_name, :email,
+      :password, :password_confirmation)
+  }
   let(:registered_teacher) { Teacher.find_by(email: teacher_attributes[:email]) }
 
-  it "Visitor signs up" do
+  it "visitor signs up" do
     visit new_teacher_registration_path
 
     fill_in :teacher_first_name, with: teacher_attributes[:first_name]

@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Teacher creates new course", type: :feature do
-  include_context "teacher signed in"
+  include_context "when teacher signed in"
 
   let(:course_attributes) { attributes_for(:course) }
   let(:created_course) { Course.find_by(title: course_attributes[:title]) }

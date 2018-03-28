@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Teacher edits course", type: :feature do
-  include_context "teacher signed in"
+  include_context "when teacher signed in"
 
   let(:course) { create(:course, teacher: current_teacher) }
 

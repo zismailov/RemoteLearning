@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Update Account", type: :feature do
-  include_context "teacher signed in"
+  include_context "when teacher signed in"
 
   before do
     visit edit_teacher_registration_path(current_teacher)

@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Cancel Account", type: :feature do
-  include_context "teacher signed in"
+  include_context "when teacher signed in"
 
   let(:teacher) { Teacher.find_by(email: current_teacher.email) }
 

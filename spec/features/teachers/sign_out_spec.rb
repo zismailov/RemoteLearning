@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Sign Out", type: :feature do
-  include_context "teacher signed in"
+  include_context "when teacher signed in"
 
   it "teacher signs out" do
     visit teacher_root_path

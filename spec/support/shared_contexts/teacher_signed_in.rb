@@ -1,4 +1,4 @@
-shared_context "teacher signed in" do
+shared_context "when teacher signed in" do
   let(:current_teacher) { create :teacher }
 
   before do

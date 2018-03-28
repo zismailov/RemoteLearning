@@ -79,7 +79,7 @@ Metrics/BlockLength:
     - "config/**/*"
 
 RSpec/ExampleLength:
-  Max: 12
+  Max: 15
 
 Rails/HasManyOrHasOneDependent:
   Enabled: false
