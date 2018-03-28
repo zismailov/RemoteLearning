@@ -1,4 +1,3 @@
-#RemoteLearning
 ## Remote Learning Management System
 
 ## Getting started
