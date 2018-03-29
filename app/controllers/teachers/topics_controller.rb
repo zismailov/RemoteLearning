@@ -10,8 +10,8 @@ module Teachers
     def show; end
 
     def create
-      Topics::Build.call(topic: topic, course: course)
-
+      result = Topics::Build.call(topic: topic, course: course)
+      flash[:alert] = result.message unless result.success?
       respond_with :teachers, course
     end
 
