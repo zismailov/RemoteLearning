@@ -2,9 +2,9 @@ require "rails_helper"
 
 RSpec.describe "Learner subscribes to course", type: :feature do
   include_context "when learner signed in"
-  let(:available_course) { create(:course, :published) }
 
   before do
+    create(:course, :published)
     visit learners_available_courses_path
   end
 

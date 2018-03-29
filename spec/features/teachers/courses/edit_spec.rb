@@ -7,7 +7,7 @@ RSpec.describe "Teacher edits course", type: :feature do
 
   before do
     visit teachers_course_path(course)
-    click_on "Edit course"
+    click_on "Edit course settings"
   end
 
   it "with valid parameters" do

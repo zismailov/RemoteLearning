@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :course do
     teacher
-    title "My Course"
-    slug "my-course"
-    description "My Course Description"
+    title { FFaker::Lorem.word }
+    slug { FFaker::Internet.slug }
+    description { FFaker::Lorem.paragraph }
   end
 
   trait :published do

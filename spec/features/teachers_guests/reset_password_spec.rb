@@ -4,12 +4,6 @@ RSpec.describe "Password Reset", type: :feature do
   let(:new_password) { "qwe123" }
   let(:teacher) { create :teacher }
 
-  def update_password
-    fill_in :teacher_password, with: new_password
-    fill_in :teacher_password_confirmation, with: new_password
-    click_button "Change my password"
-  end
-
   it "Visitor resets his password" do
     visit new_teacher_session_path
 
@@ -28,4 +22,10 @@ RSpec.describe "Password Reset", type: :feature do
 
     expect(page).to have_content("Your password has been changed successfully")
   end
+end
+
+def update_password
+  fill_in :teacher_password, with: new_password
+  fill_in :teacher_password_confirmation, with: new_password
+  click_button I18n.t("navigation.forgot_password_change")
 end

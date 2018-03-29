@@ -1,3 +1,5 @@
+require "rails_helper"
+
 RSpec.describe "Sign Up", type: :feature do
   let(:teacher_attributes) {
     attributes_for(:teacher).slice(:first_name, :last_name, :email,
@@ -14,7 +16,7 @@ RSpec.describe "Sign Up", type: :feature do
     fill_in :teacher_password, with: teacher_attributes[:password]
     fill_in :teacher_password_confirmation, with: teacher_attributes[:password_confirmation]
 
-    click_button "Create Teacher"
+    click_button "Sign up"
     open_email(registered_teacher.email)
 
     expect(current_email).to have_subject("Confirmation instructions")
@@ -22,7 +24,6 @@ RSpec.describe "Sign Up", type: :feature do
 
     visit_in_email("Confirm my account")
 
-    expect(page).to have_content("Your email address has been successfully confirmed")
-    expect(page).to have_text(registered_teacher.full_name)
+    expect(page).to have_text("Your email address has been successfully confirmed.")
   end
 end

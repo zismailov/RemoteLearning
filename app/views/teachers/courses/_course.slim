@@ -1,3 +1,4 @@
 .well
   h4 = link_to course.title, [:teachers, course]
   p = course.description
+  strong Темы: #{course.topics.count}

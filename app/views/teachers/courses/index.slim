@@ -1,12 +1,14 @@
 .row
   .col-md-8.col-md-offset-2
-    h3 My Courses
+    .pull-left
+      h3 My Courses
+    .pull-right
+      = link_to "Create new course", new_teachers_course_path, class: "btn btn-default"
+    .clearfix
     hr
 
     h4 Published
-    = render courses.ordered_by_title
+    = render courses.published.ordered_by_title
 
     h4 Not published
-    = render courses.ordered_by_title
-
-    .text-center = link_to "Create new course", new_teachers_course_path, class: "btn btn-default btn-lg"
+    = render courses.not_published.ordered_by_title
