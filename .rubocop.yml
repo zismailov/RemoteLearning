@@ -12,6 +12,7 @@ AllCops:
     - 'lib/templates/**/*'
     - 'node_modules/**/*'
     - 'vendor/**/*'
+    - config/initializers/*
 
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
