@@ -4,7 +4,8 @@ class Teacher < ApplicationRecord
 
   has_many :courses, dependent: :destroy
 
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, :locale, presence: true
+  validates :locale, inclusion: { in: %w[en ru] }
 
   def full_name
     "#{first_name} #{last_name}"

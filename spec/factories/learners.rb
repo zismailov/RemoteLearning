@@ -5,6 +5,7 @@ FactoryBot.define do
     email { generate(:learner_email) }
     password "123456"
     password_confirmation "123456"
+    locale "en"
 
     confirmed_at { Time.zone.now }
   end
