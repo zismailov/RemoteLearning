@@ -2,7 +2,7 @@ module Teachers
   class TopicsController < BaseController
     respond_to :html
 
-    TOPIC_PARAMS = %i[title slug order_index].freeze
+    TOPIC_PARAMS = %i[title slug order_index published].freeze
 
     expose :course, find_by: :slug, id: :course_slug
     expose :topic
